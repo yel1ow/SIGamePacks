@@ -1,0 +1,26 @@
+﻿@model SIGamePacks.ViewModels.PacksIndexViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+<h1>Все паки</h1>
+<div>
+    @{
+        foreach (var pack in Model.Packs)
+        {
+            <div>
+                <h2>@pack.Name</h2>
+                <p>@pack.Author</p>
+                <p>Difficulty: @pack.Difficulty</p>
+                <p>Evaluation: @pack.Evaluation</p>
+                <p>PublicationDate: @pack.PublicationDate</p>
+                <p>First tag: @pack.Tags.First().Name</p>
+            </div>
+        }
+    }
+</div>
+</body>
+</html>
